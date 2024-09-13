@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취업률 계산</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <h3>Quiz01. 취업률을 구하시오.</h3>
+        <ol>
+            <li>졸업자 수 <input type="text" id="passer"></li>
+            <li>취업자 수 <input type="text" id="successer"></li>
+            <li><button onclick="fn1(passer.value , successer.value)">취업률 계산</button></li>
+        </ol>
+
+        <div id="resBox">
+            <span>취업률 :</span> <span id="res"></span>
+        </div>
+
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

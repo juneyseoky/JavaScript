@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(=문서객체모델, Document Object Model)</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <p class="testP">1</p>
+        <span class="testP">2</span>
+        <p id="testP">3</p>
+        <div class="testP">4</div>
+        <a href="#">5</a>
+    </div>
+    <script>
+        let dom = document.getElementsByClassName("testP");
+        document.getElementById("testP").style.fontSize = "30px";
+        for (i = 0; i < dom.length; i++) {
+            dom[i].style.color = "#f80";
+            dom[i].style.fontSize = "40px";
+        }
+        console.log(dom);
+        // document.querySelectorAll("p")[0].style.fontSize = "30px";
+    </script>
+</body>
+
+</html>
