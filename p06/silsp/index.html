@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 정렬</title>
+    <style>
+        div {
+            width: 300px;
+            height: 60px;
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>배열 정렬</h1>
+
+    <script>
+        let ary = [24, -7, -11, 3];
+        console.log(ary.toString());
+        console.log("정렬");
+        console.log(ary.sort((a, b) => a - b).toString());
+        console.log(ary.sort((a, b) => b - a).toString());
+
+    </script>
+</body>
+
+</html>

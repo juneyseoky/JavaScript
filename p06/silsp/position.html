@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 레이아웃</title>
+    <style>
+        div#wrap {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        div#main {
+            height: 100px;
+            padding: 4px;
+            border: 3px solid #888;
+            position: relative;
+        }
+
+        span {
+            width: 100px;
+            border: 1px solid #08f;
+            position: absolute;
+            left: 10px;
+        }
+
+        p {
+            width: 160px;
+            margin: 0;
+            border: 1px solid #f80;
+            margin-left: 110px;
+            position: absolute;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>포지션 레이아웃</h1>
+        <hr>
+
+        <div id="main">
+            <span>내용1</span>
+
+            <p>내용2 <br>
+                줄바뀜 <br>
+                머다냐
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

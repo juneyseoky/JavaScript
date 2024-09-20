@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrap {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        div#main {
+            padding: 4px;
+            border: 3px solid #888;
+
+            display: flex;
+            justify-content: center;
+            /* align-items 수직정렬에 사용됨 stretch 영역가득 채우기 */
+            align-items: flex-end;
+            /* flex-wrap => 갤러리 게시판을 만들때 사용됨 */
+
+
+        }
+
+        span {
+            width: 100px;
+            /* flex: 1; */
+            border: 1px solid #08f;
+
+        }
+
+        p {
+            width: 100px;
+            /* flex: 1; */
+            border: 1px solid #f80;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>플렉스 레이아웃</h1>
+        <hr>
+
+        <div id="main"> <!-- 부모: 플렉스 컨테이너-->
+            <span>내용1</span>
+            <!-- 자식 플렉스 요소 -->
+            <p>내용2 <br>
+                줄바뀜 <br>
+                머다냐
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

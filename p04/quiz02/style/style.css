@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#wrap {
+    width: 220px;
+    padding: 20px 10px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    margin: 20px auto;
+
+}
+
+h1 {
+    margin: 10px;
+    font-size: 25px;
+}
+
+hr {
+    margin: 10px;
+
+}
+
+select {
+    width: 55%;
+    text-align: center;
+    margin: 5px;
+    padding: 2px;
+}
+
+#wrap>div {
+    display: flex;
+    margin-left: 10px;
+    line-height: 30px;
+}
+
+#wrap>div>span {
+    width: 80px;
+    text-align: left;
+    display: block;
+}
+
+button {
+    width: 180px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+span#res {
+    display: block;
+    text-align: center;
+    padding: 4px 5px;
+    font-weight: bold;
+}
+
+fieldset {
+    margin: 3px;
+    padding: 20px;
+}

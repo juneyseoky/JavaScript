@@ -4,42 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Quiz02</title>
-    <style>
-        div#wrap {
-            width: 350px;
-            border: 1px solid #000;
-        }
-
-        div#wrap>span {
-            font-weight: bold;
-            display: inline-block;
-            font-size: 25px;
-            padding: 5px 0;
-        }
-
-        li {
-            font-size: 25px;
-            line-height: 28px;
-        }
-
-        input {
-            width: 90px;
-            padding: 5px;
-            margin-bottom: 5px;
-        }
-
-        button {
-            width: 273px;
-            padding: 5px;
-        }
-
-        div#resBox {
-            border: 1px solid #000;
-            margin: 10px;
-            padding: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -56,13 +22,7 @@
         </div>
     </div>
 
-    <script>
-        function change() {
-            let val = document.getElementById("cm").value;
-            let inc = val / 2.54;
-            document.getElementById("res").innerText = val + "cm" + "=" + inc.toFixed(1) + "inch";
-        }
-    </script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt("숫자를 입력하세요.");
+        let list = [];
+        if (num == null || num == "") {
+            alert("재실행 후 값을 입력해주세요.");
+        } else if (isNaN(num)) {
+            alert("숫자만 입력해주세요");
+        } else if (num < 2 || num > 100) {
+            alert("범위외의 숫자를 입력해주세요.\n2~100 사이의 값을 입력하세요.")
+        } else {
+            for (i = 1; i <= num; i++) {
+                if (num % i == 0) {
+                    list.push(" " + i)
+                }
+            }
+            let res = `입력 값 ${num}의 약수\n${list.toString().trim()}\n\nEnd.`;
+            console.log(res);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <h1>Quiz</h1>
+
+    <script>
+        let num = 0;
+        let sum = 0;
+        let res = "\t숫자\t누적값\n";
+        res += "----------------------\n";
+        for (i = 0; i < 5; i++) {
+            num++;
+            sum += num
+            res += "\t" + num + "\t\t" + sum + "\n";
+        }
+        res += "\nPrint OK!!!!!!!!!"
+        console.log(res)
+    </script>
+</body>
+
+</html>
