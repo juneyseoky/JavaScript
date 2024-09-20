@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz4</title>
+</head>
+
+<body>
+    <script>
+        let list = [];
+        let res = [];
+        list[0] = Number(prompt("첫 번째 숫자 입력"));
+        list[1] = Number(prompt("두 번째 숫자 입력"));
+        list.sort((a, b) => a - b);
+        for (let i = list[0]; i <= list[1]; i++) {
+            if (i % 2 === 0) {
+                res.push(" " + i)
+            }
+        }
+        let msg = `${list[0]}부터 ${list[1]}사이의 짝수\n${res.toString().trim()}\n\nEnd.`;
+        console.log(msg);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrap {
+            width: 250px;
+            padding: 20px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+
+        div#healthBody {
+            line-height: 30px;
+            margin: 10px 0;
+        }
+
+        div#healthBody>label {
+            display: flex;
+        }
+
+        label>span {
+            display: inline-block;
+            width: 100px;
+        }
+
+        label>input {
+            width: 100px;
+            padding: 3px 5px;
+            margin: 5px;
+
+        }
+
+        div#bntBox {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        button {
+            width: 40%;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            font-weight: bold;
+            border-color: blue;
+        }
+
+        p {
+            margin: 5px 0;
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="healthBody">
+            <label>
+                <span>몸무게(kg)</span><input type="text" id="weight" autofocus>
+            </label>
+            <label>
+                <span>키(cm)</span><input type="text" id="height">
+            </label>
+        </div>
+        <div id="bntBox">
+            <button type="button" onclick="fn(this)" id="result">결과확인</button>
+            <button type="button" onclick="fn(this)" id="css">CSS 적용</button>
+        </div>
+        <p>당신의 BMI 지수는 <span id="bmi">00</span> 입니다.</p>
+        <p id="res"></p>
+        <p id="ent"></p>
+    </div>
+    <script>
+        function fn(res) {
+            let wei = document.querySelector("#weight").value;
+            let hei = document.querySelector("#height").value;
+            if (res.id == "result") {
+                let bmi = wei / (Math.pow(hei / 100, 2));
+                document.querySelector("#bmi").innerText = bmi.toFixed(1);
+                bmiCheck(bmi);
+            } else {
+                document.querySelector("#bmi").style.textDecoration = "underline";
+                document.querySelector("#bmi").style.color = "red";
+                document.querySelector("#ent").innerText = "(지수계산 결과에 빨간색과 밑줄 적용)";
+            }
+
+        }
+        function bmiCheck(bmi) {
+            let txt = "";
+            if (bmi < 20.0) {
+                txt = "저체중입니다.";
+            } else if (bmi >= 20.0 && bmi < 25.0) {
+                txt = "표준체중입니다.";
+            } else {
+                txt = "과체중입니다."
+            }
+            document.querySelector("#res").innerText = txt;
+        }
+    </script>
+
+</body>
+
+</html>
