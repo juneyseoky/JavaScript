@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천단위 구분쉼표 적용</title>
+    <style>
+        div#wrap {
+            width: 350px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        #inputBox {
+            justify-content: space-around;
+        }
+
+        #inputBox>* {
+            display: inline-block;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 120px;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>천단위 구분쉼표 적용</h1>
+        <hr>
+        <div id="inputBox">
+            <span>숫자 입력</span>
+            <input type="text" id="num">
+            <button type="button" onclick="localeString()">천단위 쉼표 적용</button>
+        </div>
+    </div>
+    <script>
+        function localeString() {
+            let dom = document.querySelector("#num");
+            let num = Number(dom.value);
+            console.log(num.toLocaleString());
+            dom.value = num.toLocaleString();
+        }
+    </script>
+</body>
+
+</html>

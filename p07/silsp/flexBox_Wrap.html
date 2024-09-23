@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스박스_랩</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div#wrap {
+            width: 420px;
+            border: 3px solid #aaa;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 30px auto;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        main#flexBoxWrap {
+            border: 3px solid #08f;
+            padding: 6px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div.flexBox {
+            width: 100px;
+            text-align: center;
+            border: 3px solid #f80;
+            font-size: 30px;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>플렉스박스_랩</h1>
+        <hr>
+
+        <main id="flexBoxWrap">
+            <!-- 플렉스 컨테이너 -->
+
+        </main>
+    </div>
+    <script>
+        let tag = "";
+        for (let i = 0; i < 10; i++) {
+            tag += "<div class='flexBox'>" + i + "</div>";
+
+        }
+        const dom = document.querySelector("#flexBoxWrap");
+        dom.innerHTML = tag;
+    </script>
+</body>
+
+</html>

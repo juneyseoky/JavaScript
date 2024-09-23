@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div#wrap {
+            width: 510px;
+            padding: 10px;
+            border: 3px solid #aaa;
+            margin: 10px auto;
+        }
+
+        main#galleryBBS {
+            display: flex;
+            flex-wrap: wrap;
+            /* 플렉스 박스 줄바꿈 */
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        div.box {
+            width: 100px;
+            border: 2px solid #08f;
+            margin: 10px;
+        }
+
+        h4 {
+            text-indent: 4px;
+            /* 들여쓰기 */
+            padding: 8px;
+            border-bottom: 2px solid #08f;
+        }
+
+        .box>span {
+            font-size: 14px;
+            padding: 6px 6px 6px 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        HTML
+        <h1>Flex Box Structure(Gallery BBS)</h1>
+        <hr>
+        <main id="galleryBBS">
+            <!--	플렉스	박스	레이아웃	구조	샘플	-->
+            <!-- <div class="box">
+                <h4>포도</h4>
+                <span>10</span>
+            </div> -->
+        </main>
+    </div>
+    <script>
+
+        const ary = ["사과", "딸기", "수박", "고구마", "토마토", "귤", "옥수수", "감자", "복숭아", "포도"];
+        const galleryBox = document.querySelector("#galleryBBS");
+        
+        for (let i = ary.length - 1; i >= 0; i--) {
+            galleryBox.innerHTML += `<div class ="box"><h4>${ary[i]}</h4>
+                <span> ${ary.indexOf(ary[i]) + 1}</span >
+                </div >`;
+        }
+    </script>
+    <!--	div#wrap	-->
+</body>
+
+</html>

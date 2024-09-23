@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>배열 최대값</h1>
+    <script>
+        const ary = [3.4, 15, -0.6, 7];
+
+        let max = function (ary) {
+            console.log(ary);
+            ary.sort((a, b) => a - b);
+            console.log("최대값 : " + ary[ary.length - 1]);
+        }
+        max(ary);
+    </script>
+</body>
+
+</html>

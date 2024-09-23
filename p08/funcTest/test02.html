@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 정의</title>
+</head>
+
+<body>
+    <script>
+        test(4, 20);
+        // 함수의 호출(invoke, call, 실행)
+        // Hoistion(호이스팅 = 끌어올림)
+        // 지양해야 함(참고. let 키워드로 호이스팅 금지)
+
+        // function test() {
+        //     console.log(p1 + p2);
+        // }
+
+        let test = function () {
+            let p1 = arguments[0];
+            let p2 = arguments[1];
+
+            console.log(p1 + p2);
+
+        }
+    </script>
+</body>
+
+</html>

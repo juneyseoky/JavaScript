@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#wrap {
+            width: 750px;
+            border: 2px solid #aaa;
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        hr {
+            margin: 20px 0;
+        }
+
+        table {
+            margin: 10px auto;
+            border: 3px solid #08f;
+            padding: 10px;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            border: 3px solid #08f;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>구구단 테이블</h1>
+        <hr>
+        <table>
+            <tbody id="tblRes">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const dom = document.querySelector("#tblRes");
+        let tag = "";
+
+        for (let i = 1; i <= 9; i++) {
+            tag += `<tr>`;
+            for (let y = 2; y <= 9; y++) {
+                // 구구단의 계산 결과를 올바르게 표시
+                tag += `<td>${y} x ${i} = ${y * i}</td>`;
+            }
+            tag += `</tr>`;
+        }
+        dom.innerHTML = tag;
+
+    </script>
+</body>
+
+</html>
