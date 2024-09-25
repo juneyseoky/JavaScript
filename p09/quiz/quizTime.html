@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        div#wrap {
+            width: 250px;
+            border: 2px solid #f8a;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin: 5px 0;
+        }
+
+        button {
+            width: 60px;
+            margin: 0 5px;
+            padding: 5px;
+            background-color: #ffa;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+    </div>
+    <script>
+        const wrap = document.querySelector("div#wrap");
+        let date = new Date();
+        let timeFn;
+        let options = {
+            hour: '2-digit',   // 2자리 시간
+            minute: '2-digit', // 2자리 분
+            second: '2-digit', // 2자리 초
+            hour12: true       // 12시간 형식 사용 (오전/오후 표시)
+        };
+        let time = date.toLocaleTimeString('ko-KR', options)
+
+        let tag = `<h1>전자시계</h1>
+        <hr><span id="time">${time}</span>`;
+        tag += `<button type="button" id="start">Stat</button>`;
+        tag += `<button type="button" id="stop">Stop</button>`;
+        wrap.innerHTML = tag;
+
+        document.querySelector("button#start")
+            .addEventListener("click", function () {
+                if (!timeFn) { 
+                    timeFn = setInterval(() => {
+                        let currentDate = new Date();
+                        document.querySelector("#time").innerText = currentDate.toLocaleTimeString('ko-KR', options);
+                    }, 1000);
+                }
+            });
+        document.querySelector("button#stop")
+            .addEventListener("click", () => {
+                clearInterval(timeFn);
+                timeFn = null;
+            });
+
+    </script>
+</body>
+
+</html>

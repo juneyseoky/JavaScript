@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 팝업</title>
+    <style>
+        main#main {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            background-color: #f80;
+        }
+
+        div#layerBG {
+            width: 100%;
+            height: 100%;
+            border: 5px solid #5a5;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        div#layerBG>div#popupLayer {
+            width: 200px;
+            height: 100px;
+            border: 3px solid #08f;
+            background-color: rgba(0, 138, 255, 0.9);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <main id="main">
+
+        </main>
+        <button type="button" onclick="fnModal()">레이어팝업 클릭</button>
+        <button type="button" onclick="fnWin()">윈도우팝업 클릭</button>
+        <button type="button" onclick="winClose()">윈도우팝업 닫기</button>
+    </div>
+    <div id="layerBG">
+        <div id="popupLayer"></div>
+    </div>
+    <script>
+        let openFlag;
+        function fnModal() {
+            document.querySelector("#layerBG").style.display = "block";
+        }
+
+        function fnWin() {
+            let scrWid = screen.width;
+            let csrHei = screen.height;
+            let wid = 400;
+            let hei = 300;
+            center_width = (scrWid - wid) / 2;
+            center_height = (csrHei - hei) / 2;
+            let url = "http://www.naver.com";
+            let popName = "웃기지마라";
+            let attr = `width=${wid}px, 
+            height=${hei}px, 
+            left=${center_width}px, 
+            top=${center_height}px
+            `;
+
+            // 속성 : 가로폭, 세로높이, 왼쪽과 상단에서의 위치를 기재함
+            openFlag = window.open(url, popName, attr);
+        }
+        function winClose() {
+            openFlag.close();
+
+        }
+    </script>
+</body>
+
+</html>

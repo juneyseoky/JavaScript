@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>이벤트 객체의 이벤트 키코드</h1>
+    <p>네이버 이동</p>
+    <input type="text" onkeypress="myFunc(event)">
+    <script>
+        function myFunc(e) {
+            let code = event.keyCode;
+            console.log("code : " + code);
+        }
+
+        document.querySelector("p")
+            .addEventListener("click", function () {
+                location.href("http://naver.com");
+                // window.open("http://naver.com");
+            });
+    </script>
+
+</body>
+
+</html>
